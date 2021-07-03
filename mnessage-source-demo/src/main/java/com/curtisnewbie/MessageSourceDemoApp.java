@@ -22,6 +22,11 @@ public class MessageSourceDemoApp {
         String msgForUk = messageSource.getMessage("my-message", null, Locale.UK);
         logger.info("my-message with locale uk: {}", msgForUk);
 
+        String custMsgForCh = messageSource.getMessage("custom-message", new Object[]{"yongj.zhuang"}, Locale.SIMPLIFIED_CHINESE);
+        logger.info("custom-message with locale ch: {}", custMsgForCh);
+        String custMsgForUk = messageSource.getMessage("custom-message", new Object[]{"yongj.zhuang"}, Locale.UK);
+        logger.info("custom-message with locale uk: {}", custMsgForUk);
+
     }
 
 }
